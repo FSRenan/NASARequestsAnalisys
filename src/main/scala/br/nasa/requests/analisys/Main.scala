@@ -1,10 +1,6 @@
 package br.nasa.requests.analisys
 
 import java.text.SimpleDateFormat
-import java.time.{LocalDateTime, ZoneId}
-import java.time.format.DateTimeFormatter
-import java.util.Date
-
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
@@ -18,11 +14,6 @@ object Main {
 
     val lines = sc.textFile("NASAInputFiles/simpleInputTest.txt,NASAInputFiles/simpleInputTest2.txt")
 
-
-    val format = new java.text.SimpleDateFormat("dd/MM/yyyy")
-    val date = format.parse("01/08/1995")
-
-    println("%%%" + date)
     //1 - HOSTS UNICOS
     println("1 - HOSTS unicos: " + uniqueHosts(lines))
 
@@ -33,10 +24,12 @@ object Main {
     println("3 - 5 URLs com mais erros 404: ")
     printHostsWithMostErrors(lines)
 
-
     //4 - QUANTIDADE DE ERROS 404 POR DIA
-    println("3 - Total de erros 404 por dia: ")
+    println("4 - Total de erros 404 por dia: ")
     printErrorsPerDay(lines)
+
+    //5 - QUANTIDADE TOTAL DE BYTES RETORNADOS
+    println("5 - Total de bytes retornados: " + getBytesSum(lines))
   }
 
   def uniqueHosts(lines: RDD[String]): Int = {
@@ -52,6 +45,14 @@ object Main {
     httpReturnCodesCount("404")
   }
 
+  def getBytesSum(lines: RDD[String]): Long = {
+    val bytes = lines
+      .map(line => line.split("\"")(2).split(" ")(2))
+      .filter(byte => !byte.equals("-"))
+      .map(byte => byte.toLong)
+
+    bytes.sum().toLong
+  }
 
   def printHostsWithMostErrors(lines: RDD[String]): Unit = {
     val hostsReturnCodes = lines.map(line => (line.split(" ")(0), line.split("\"")(2).substring(1, 4)))
