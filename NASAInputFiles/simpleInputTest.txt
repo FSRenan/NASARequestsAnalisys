@@ -1,0 +1,15 @@
+199.33.32.50 - - [01/Jul/1995:00:02:16 -0400] "GET /shuttle/countdown/video/livevideo.gif HTTP/1.0" 200 62761
+lmsmith.tezcat.com - - [01/Jul/1995:00:02:16 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 3985
+dynip42.efn.org - - [01/Jul/1995:00:02:17 -0400] "GET /icons/blank.xbm HTTP/1.0" 200 509
+grimnet23.idirect.com - - [01/Jul/1995:00:50:12 -0400] "GET /www/software/winvn/winvn.html HTTP/1.0" 404 -
+miriworld.its.unimelb.edu.au - - [02/Aug/1995:01:04:54 -0400] "GET /history/history.htm HTTP/1.0" 404 -
+miriworld.its.unimelb.edu.au - - [01/Jul/1995:01:04:54 -0400] "GET /history/history.htm HTTP/1.0" 404 -
+cs1-06.leh.ptd.net - - [02/Jul/1995:01:17:38 -0400] "GET /sts-71/launch/" 404 -
+cs1-06.leh.ptd.net - - [01/Jul/1995:01:17:38 -0400] "GET /sts-71/launch/" 404 -
+dialip-24.athenet.net - - [01/Jul/1995:01:33:02 -0400] "GET /history/apollo/apollo-13.html HTTP/1.0" 404 -
+dialip-24.athenet.net - - [01/Jul/1995:01:33:02 -0400] "GET /history/apollo/apollo-13.html HTTP/1.0" 404 -
+h96-158.ccnet.com - - [01/Jul/1995:01:35:50 -0400] "GET /history/apollo/a-001/a-001-patch-small.gif HTTP/1.0" 404 -
+h96-158.ccnet.com - - [01/Jul/1995:01:35:50 -0400] "GET /history/apollo/a-001/a-001-patch-small.gif HTTP/1.0" 404 -
+h96-158.ccnet2.com - - [01/Jul/1995:01:36:23 -0400] "GET /history/apollo/a-001/movies/ HTTP/1.0" 404 -
+h96-158.ccnet2.com - - [01/Jul/1995:01:36:23 -0400] "GET /history/apollo/a-001/movies/ HTTP/1.0" 404 -
+ts01-ind-21.iquest.net - - [01/Jul/1995:02:53:22 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
