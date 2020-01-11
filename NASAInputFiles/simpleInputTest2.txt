@@ -1,3 +1,11 @@
 198.77.5.102 - - [01/Aug/1995:07:41:58 -0400] "GET /images/MOSAIC-logosmall.gif HTTP/1.0" 200 363
 198.77.5.102 - - [01/Aug/1995:07:41:58 -0400] "GET /images/USA-logosmall.gif HTTP/1.0" 200 234
 198.77.5.102 - - [01/Aug/1995:07:41:58 -0400] "GET /images/WORLD-logosmall.gif HTTP/1.0" 200 669
+www-b2.proxy.aol.com - - [01/Aug/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aol.com - - [01/Aug/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aol.com - - [01/Aug/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aowl.com - - [01/Aug/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aowl.com - - [01/Jul/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aowl.com - - [01/Jul/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aowl.com - - [01/Jul/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
+www-b2.proxy.aowl.com - - [01/Jul/1995:01:48:29 -0400] "GET /pub/winvn/readme.txt HTTP/1.0" 404 -
