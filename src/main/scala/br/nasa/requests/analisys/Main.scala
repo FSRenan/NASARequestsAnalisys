@@ -19,9 +19,9 @@ object Main {
     println("1.HOSTS unicos: " + uniqueHosts)
 
     //CASE 2 404 COUNT
-    val errors = lines.map(line => line.split("\"")(2).substring(1, 4))
-    for (error <- errors) println("Error: " + error)
-
+    val httpReturnCodes = lines.map(line => line.split("\"")(2).substring(1, 4))
+    val httpReturnCodesCount = httpReturnCodes.countByValue();
+    println("2.Erros 404: " +  httpReturnCodesCount("404"))
 
     val words = lines.flatMap(line => line.split("\n"))
     //for ((host, count) <- hostsCount) println(host + " : " + count)
