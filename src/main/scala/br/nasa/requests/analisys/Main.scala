@@ -4,47 +4,31 @@ import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
 
 object Main {
-  def main(args: Array[String]) {
-    val inputFile = "wordCount.txt"
-    val outputFile = "output"
-    val log = Logger.getLogger(this.getClass.getName)
 
+  def main(args: Array[String]) {
     Logger.getLogger("org").setLevel(Level.ERROR)
     val conf = new SparkConf().setAppName("wordCounts").setMaster("local[3]")
     val sc = new SparkContext(conf)
 
-    val file = sc.textFile(inputFile)
-    val counts = file.flatMap(line => line.split(" "))
-      .map(word => (word, 1))
-      .reduceByKey(_ + _)
+    val lines = sc.textFile("NASAInputFiles/simpleInputTest.txt,NASAInputFiles/simpleInputTest2.txt")
 
-    log.info(counts.count())
-    counts.saveAsTextFile(outputFile)
-    counts.collect()
+    //CASE 1 HOSTS UNICOS
+    val hosts = lines.map(line => line.split(" ")(0))
+    val hostsCount = hosts.countByValue()
+    val uniqueHosts = hostsCount.count(hostsCount => hostsCount._2 == 1)
+    println("1.HOSTS unicos: " + uniqueHosts)
 
-    sc.stop()
+    //CASE 2 404 COUNT
+    val errors = lines.map(line => line.split("\"")(2).substring(1, 4))
+    for (error <- errors) println("Error: " + error)
+
+
+    val words = lines.flatMap(line => line.split("\n"))
+    //for ((host, count) <- hostsCount) println(host + " : " + count)
+    val wordCounts = words.countByValue()
+    //  for (word <- words) println(word)
 
   }
 
-  def execute(input: String, output: String, master: Option[String] = Some("local")): Unit = {
-    val sc = {
-      val conf = new SparkConf().setAppName("Spark WordCount")
-      for (m <- master) {
-        conf.setMaster(m)
-      }
-      new SparkContext(conf)
-    }
 
-    // Adapted from Word Count example on http://spark-project.org/examples/
-    val file = sc.textFile(input)
-    val words = file.flatMap(line => tokenize(line))
-    val wordCounts = words.map(x => (x, 1)).reduceByKey(_ + _)
-    wordCounts.saveAsTextFile(output)
-  }
-
-  // Split a piece of text into individual words.
-  private def tokenize(text: String): Array[String] = {
-    // Lowercase each word and remove punctuation.
-    text.toLowerCase.replaceAll("[^a-zA-Z0-9\\s]", "").split("\\s+")
-  }
 }

@@ -1,0 +1,6 @@
+199.33.32.50 - - [01/Jul/1995:00:02:16 -0400] "GET /shuttle/countdown/video/livevideo.gif HTTP/1.0" 200 62761
+lmsmith.tezcat.com - - [01/Jul/1995:00:02:16 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 3985
+dynip42.efn.org - - [01/Jul/1995:00:02:17 -0400] "GET /icons/blank.xbm HTTP/1.0" 200 509
+grimnet23.idirect.com - - [01/Aug/1995:00:50:12 -0400] "GET /www/software/winvn/winvn.html HTTP/1.0" 404 -
+miriworld.its.unimelb.edu.au - - [01/Aug/1995:01:04:54 -0400] "GET /history/history.htm HTTP/1.0" 404 -
+miriworld.its.unimelb.edu.au - - [01/Aug/1995:01:04:54 -0400] "GET /history/history.htm HTTP/1.0" 404 -
