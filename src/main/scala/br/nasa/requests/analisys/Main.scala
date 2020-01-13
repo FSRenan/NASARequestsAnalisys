@@ -20,7 +20,7 @@ object Main extends Serializable {
     //1 - HOSTS UNICOS
     println("1 - HOSTS unicos: " + uniqueHosts(lines))
 
-    //2 - QUANTIDADE TOTAL DE ERROS 40
+    //2 - QUANTIDADE TOTAL DE ERROS 404
     println("2 - Erros 404: " + httpErrorCodeCount(lines))
 
     //3 - 5 URLS COM MAIS ERROS 404

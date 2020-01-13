@@ -1,6 +1,6 @@
 # NASA Requests Analisys
 
-O projeto tem como objetivo analisar os seguintes pontos das requisições ao servidos da NASA Kennedy Space Center WWW na Flórida do período específico de julho e agosto de 1995:
+O projeto tem como objetivo analisar os seguintes pontos das requisições ao servidor da NASA Kennedy Space Center WWW na Flórida do período específico de julho e agosto de 1995:
 
 • Número de hosts únicos
 
